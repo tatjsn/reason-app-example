@@ -9,7 +9,7 @@ module Products = {
     );
     <div className="Products">
       (ReactRe.stringToElement "Our products:")
-      (ReactRe.arrayToElement (Array.of_list views))
+      (ReactRe.listToElement views)
     </div>;
   };
 };
