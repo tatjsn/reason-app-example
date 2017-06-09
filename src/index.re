@@ -19,8 +19,13 @@ module Option = {
     | None => None;
 };
 
+external spaceUrl : string = "process.env.SPACE_URL" [@@bs.val];
+external accessToken : string = "process.env.ACCESS_TOKEN" [@@bs.val];
+
+let url = spaceUrl ^ "/entries?access_token=" ^ accessToken ^ "&content_type=product&include=0";
+
 Js.Promise.(
-  Bs_fetch.fetch ""
+  Bs_fetch.fetch url
   |> then_ Bs_fetch.Response.json
   |> then_ (fun json => json
             |> Js.Json.decodeObject
