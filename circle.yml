@@ -21,4 +21,4 @@ deployment:
     branch: master
     commands:
       - yarn build
-      - now -t ${NOW_TOKEN} --public public
+      - now --public -t ${NOW_TOKEN} ./public
