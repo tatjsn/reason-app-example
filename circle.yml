@@ -20,5 +20,5 @@ deployment:
   development:
     branch: master
     commands:
-      - now -t ${NOW_TOKEN}
-      - now -t ${NOW_TOKEN} alias crra
+      - yarn build
+      - now -t ${NOW_TOKEN} --public public
