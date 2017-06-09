@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/products.re renders 1`] = `
+<div
+  className="Products"
+>
+  Our products:
+  <div>
+    Prod1
+  </div>
+</div>
+`;
